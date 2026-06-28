@@ -1,5 +1,16 @@
 ---
-
+const pageTitle = "About Us";
+const identity = {
+	name: "SquareLike, LLC",
+	city: "Carmel",
+	state: "Indiana",
+	country: "United States",
+	business: "Content Mangement and Web Development"
+};
+const skills = ["HTML", "CSS", "JavaScript", "PHP", "Go", "React", "Astro", "WordPress", "Drupal", "CMS", "Web Design", "Web Development", "Content Management"];
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -9,16 +20,32 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About Us</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-        <a href="/">Home</a>
+        <nav><a href="/">Home</a>
         <a href="/about/">About Us</a>
-		<a href="/blog/">Blog</a>
-		<h1>About Us</h1>
-		<h2>...here we go.</h2>
-        <p> We're working through this tutorial.</p>
-        <p>The site will be updated as we go. Once we're done, we'll start over with something real.</p>
+		<a href="/blog/">Blog</a></nav>
 
+		<h1>{pageTitle}</h1>
+
+		<p>Here's some info about {identity.name}:</p>
+		<ul>
+			<li>We are headquartered in {identity.city}, {identity.state} which is in the {identity.country}.</li>
+			<li>We specialize in {identity.business}.</li>
+		</ul>
+		
+		<p>Our team has expertise in the following technologies:</p>
+		<ul>
+			{skills.map((skill) => (
+				<li>{skill}</li>
+			))}
+		</ul>
+
+		{happy && <p>I am happy to be learning Astro!</p>}
+
+		{finished && <p>I finished this tutorial!</p>}
+
+		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 	</body>
 </html>
