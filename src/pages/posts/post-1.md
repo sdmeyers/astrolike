@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'The First AstroLike Post'
 pubDate: 2026-06-07
 description: 'This is the first post of my new AStro site.'
@@ -8,10 +9,6 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging"]
 ---
-
-# The First AstroLike Post
-
-Published on: 2026-06-07
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
